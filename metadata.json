@@ -1,0 +1,7 @@
+{
+  "name": "MTA Live Map",
+  "description": "Native Android companion and real-time live map for MTA:SA servers with WebSocket sync, online player tracking, and live telemetry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

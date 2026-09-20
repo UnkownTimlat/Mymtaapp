@@ -1,0 +1,20 @@
+<meta>
+    <info author="MTA Live Map" type="script" name="MTA Live Map Connector" version="1.0.0" description="Connects MTA:SA servers to the MTA Live Map Android companion app with real-time player and map telemetry." />
+
+    <!-- Configuration Script -->
+    <script src="config.lua" type="server" />
+
+    <!-- Core Server Telemetry and Networking Script -->
+    <script src="server.lua" type="server" />
+
+    <!-- Exported HTTP functions for MTA's built-in Web Server (REST endpoints) -->
+    <!-- These allow the Android App or external bridges to query the server using MTA's HTTP interface -->
+    <export function="httpGetStatus" type="http" />
+    <export function="httpGetPlayers" type="http" />
+    <export function="httpGetPlayerDetails" type="http" />
+    <export function="httpGetBlips" type="http" />
+    <export function="httpAuthenticate" type="http" />
+
+    <!-- Inbound HTTP handler for raw JSON requests /api/status, /api/players, etc. -->
+    <html src="api.lua" default="true" />
+</meta>
